@@ -11,7 +11,7 @@ namespace MaterialManagementSystem
 {
 
 
-    public partial class addnewrow
+    public partial class PrintGatePass
     {
 
         /// <summary>
@@ -24,30 +24,48 @@ namespace MaterialManagementSystem
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// GridQualifaction control.
+        /// Image1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridQualifaction;
+        protected global::System.Web.UI.WebControls.Image Image1;
 
         /// <summary>
-        /// btnaddnewrow control.
+        /// lblRefNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnaddnewrow;
+        protected global::System.Web.UI.WebControls.Label lblRefNo;
 
         /// <summary>
-        /// btnsubmit control.
+        /// lblDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnsubmit;
+        protected global::System.Web.UI.WebControls.Label lblDate;
+
+        /// <summary>
+        /// gvMaterials control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvMaterials;
+
+        /// <summary>
+        /// btnPrint control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnPrint;
     }
 }
