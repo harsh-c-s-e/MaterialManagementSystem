@@ -75,6 +75,8 @@
     <Content Include="logo\ntpcplant.jpg" />
     <Content Include="Main2.aspx" />
     <Content Include="PrintGatePass.aspx" />
+    <Content Include="Report.aspx" />
+    <Content Include="ReturnMaterial.aspx" />
     <Content Include="SearchGatePass.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -111,6 +113,20 @@
       <DependentUpon>PrintGatePass.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnMaterial.aspx.cs">
+      <DependentUpon>ReturnMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReturnMaterial.aspx.designer.cs">
+      <DependentUpon>ReturnMaterial.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SearchGatePass.aspx.cs">
       <DependentUpon>SearchGatePass.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -118,9 +134,17 @@
     <Compile Include="SearchGatePass.aspx.designer.cs">
       <DependentUpon>SearchGatePass.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

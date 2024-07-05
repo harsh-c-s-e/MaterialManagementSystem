@@ -10,18 +10,25 @@ namespace MaterialManagementSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            
+
+            //lblDate.Text = (string)Session["Date"];
             if (!IsPostBack)
             {
+                DateTime issueDate = (DateTime)Session["Date"];
+                lblDate.Text = issueDate.ToString("MM/dd/yyyy");
+
                 string gatePassId = Request.QueryString["GatePass_id"];
-                string gatePassdate = Request.QueryString["IssueDate"];
-                if (!string.IsNullOrEmpty(gatePassId) && !string.IsNullOrEmpty(gatePassdate))
+                //string gatePassdate = Request.QueryString["IssueDate"];
+                if (!string.IsNullOrEmpty(gatePassId) )
                 {
-                    LoadGatePassDetails(gatePassId, gatePassdate);
+                    LoadGatePassDetails(gatePassId);
                 }
             }
         }
 
-        private void LoadGatePassDetails(string gatePassId,string gatePassdate)
+        private void LoadGatePassDetails(string gatePassId)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["db1ConnectionString"].ConnectionString;
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -43,7 +50,9 @@ namespace MaterialManagementSystem
                 if (dt.Rows.Count > 0)
                 {
                     lblRefNo.Text = gatePassId;
-                    lblDate.Text = gatePassdate;
+                    DateTime issueDate = (DateTime)Session["Date"];
+                    lblDate.Text = issueDate.ToString("MM/dd/yyyy");
+                    //lblDate.Text = gatePassdate;
                     //lblDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
                     gvMaterials.DataSource = dt;

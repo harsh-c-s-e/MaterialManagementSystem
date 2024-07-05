@@ -7,15 +7,17 @@
     <title> MainPage</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <%--<link rel="stylesheet" href="style.css">--%>
+    
     <style>
-        #maindiv{
-            height:700px;
-            /*background-color:blue;*/
-            background-image:url("./logo/ntpcplant.jpg");
-            background-size:cover;
-            /*position:absolute;*/
-        }
+        body {
+  padding-top: 60px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}
+        
         .navbar{
             position:fixed;
             width:100%;
@@ -41,7 +43,8 @@
             <a class="text-dark nav-item nav-link active" href="IssueGatepass.aspx">Issue Gatepass <span class="sr-only">(current)</span></a>
             <a class="text-dark nav-item nav-link" href="SearchGatePass.aspx">Print Gatepass</a>
             <a class="text-dark nav-item nav-link" href="SearchGatepass.aspx">Search Gatepaass</a>
-            <a class="text-dark nav-item nav-link disabled" href="#">Return material</a>
+            <a class="text-dark nav-item nav-link" href="Report.aspx">Report</a>
+            <a class="text-dark nav-item nav-link disabled" href="ReturnMaterial.aspx">Return material</a>
           </div>
         </div>
       </nav>
@@ -50,7 +53,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-        <div id="maindiv">
+        <div>
             <asp:Button class="button" ID="logout" runat="server" Text="Logout" PostBackUrl="~/Login.aspx" BackColor="Red" BorderColor="#CC3300" ForeColor="White"   />
         </div>
 

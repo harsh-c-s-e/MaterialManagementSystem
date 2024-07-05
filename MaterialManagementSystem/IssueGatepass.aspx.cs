@@ -169,8 +169,12 @@ namespace MaterialManagementSystem
 
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
+            Session["Date"] =txtdate.Text;
+
+
             SaveGridDataToDatabase();
 
+            Response.Redirect("PrintGatePass.aspx");
             txtvehicle.Text = "";
             txtowner.Text = "";
             txtissuingdept.Text = "";

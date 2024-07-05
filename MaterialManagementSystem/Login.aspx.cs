@@ -31,37 +31,16 @@ namespace MaterialManagementSystem
             if (dr.Read())
             {
                 Session["id"] = txtusername.Text;
-                Response.Redirect("Main2.aspx");
+                Response.Redirect("IssueGatepass.aspx");
             }
             else
             {
                 Response.Write("<script> alert('Invalid username or password')</script>");
             }
-
-
-
-            //if (txtusername.Text == "admin" && txtpassword.Text == "admin")
-            //{
-            //    Response.Redirect("Mainpage.aspx");
-            //}
-            //else
-            //{
-            //    Response.Write("<script>alert('pls check password') </script>");
-            //}
-
-
         }
 
         protected void cbshowpassword_CheckedChanged(object sender, EventArgs e)
         {
-            //if (cbshowpassword.Checked)
-            //{
-            //    txtpassword.TextMode = TextBoxMode.SingleLine;
-            //}
-            //else
-            //{
-            //    txtpassword.TextMode = TextBoxMode.Password;
-            //}
 
         }
 
@@ -69,8 +48,6 @@ namespace MaterialManagementSystem
         {
             txtpassword.Text = "";
             txtusername.Text = "";
-
-
         }
     }
 }
