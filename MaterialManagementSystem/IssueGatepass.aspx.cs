@@ -179,8 +179,9 @@ namespace MaterialManagementSystem
             txtissuingdept.Text = "";
             txtfrom.Text = "";
             txtto.Text = "";
-            txtissuedby.Text = "";
-            txtapprovedby.Text = "";
+            //txtissuedby.Text = "";
+            //txtapprovedby.Text = "";
+            
 
             txtrefno.Text = GenerateNewRefNo();
 
