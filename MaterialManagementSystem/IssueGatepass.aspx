@@ -114,8 +114,16 @@
                     <td> <asp:TextBox Style="width: 95%" ID="txtissuingdept" runat="server" Width="232px"></asp:TextBox> </td>
                     <td> <asp:TextBox Style="width: 95%" ID="txtfrom" runat="server"></asp:TextBox> </td>
                     <td> <asp:TextBox Style="width: 95%" ID="txtto" runat="server"></asp:TextBox> </td>
-                    <td> <asp:TextBox Style="width: 95%" ID="txtissuedby" runat="server"></asp:TextBox> </td>
-                    <td> <asp:TextBox Style="width: 95%" ID="txtapprovedby" runat="server"></asp:TextBox> </td>
+                    <%--<td> <asp:TextBox Style="width: 95%" ID="txtissuedby" runat="server"></asp:TextBox> </td>--%>
+                    <td>
+                        <asp:DropDownList  ID="txtissuedby" runat="server" DataSourceID="SqlDataSource1" DataTextField="EmployeeID" DataValueField="Name" Width="200px"></asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db1ConnectionString4 %>" ProviderName="<%$ ConnectionStrings:db1ConnectionString4.ProviderName %>" SelectCommand="SELECT [EmployeeID], [Name] FROM [EmployeeDetails]"></asp:SqlDataSource>
+                    </td>
+                    <%--<td> <asp:TextBox Style="width: 95%" ID="txtapprovedby" runat="server"></asp:TextBox> </td>--%>
+                    <td>
+                        <asp:DropDownList ID="txtapprovedby" runat="server" DataSourceID="SqlDataSource2" DataTextField="EmployeeID" DataValueField="Name" Width="200px"></asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:db1ConnectionString4 %>" SelectCommand="SELECT [EmployeeID], [Name] FROM [EmployeeDetails]"></asp:SqlDataSource>
+                    </td>
                 </tr>
             </table>
             

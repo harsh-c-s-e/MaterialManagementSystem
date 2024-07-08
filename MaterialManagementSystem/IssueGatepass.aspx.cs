@@ -173,7 +173,7 @@ namespace MaterialManagementSystem
 
             SaveGridDataToDatabase();
 
-            Response.Redirect("PrintGatePass.aspx");
+            //Response.Redirect("PrintGatePass.aspx");
             txtvehicle.Text = "";
             txtowner.Text = "";
             txtissuingdept.Text = "";
