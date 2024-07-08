@@ -9,18 +9,18 @@
     
     <style>
         body {
-  padding-top: 60px;
-}
-@media (max-width: 979px) {
-  body {
-    padding-top: 0px;
-  }
-}
+            padding-top: 60px;
+        }
+        @media (max-width: 979px) {
+            body {
+                padding-top: 0px;
+            }
+        }
         .navbar{
-    position:fixed;
-    width:100%;
-    top:0;
-}
+            position:fixed;
+            width:100%;
+            top:0;
+        }
     </style>
 </head>
 <body>
@@ -66,7 +66,6 @@
                     <asp:BoundField DataField="To_address" HeaderText="TO" />
                     <asp:BoundField DataField="Reason_for_issue" HeaderText="Reason for Issue" />
                     <asp:BoundField DataField="Return_type" HeaderText="Returnable / Non-Returnable" />
-                    <%--<asp:ButtonField CommandName="Print" Text="Print" />--%>
                 </Columns>
             </asp:GridView>
         </div>

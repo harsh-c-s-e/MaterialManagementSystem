@@ -169,7 +169,6 @@ namespace MaterialManagementSystem
 
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
-            Session["Date"] =txtdate.Text;
 
 
             SaveGridDataToDatabase();

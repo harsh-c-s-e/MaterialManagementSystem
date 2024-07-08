@@ -60,6 +60,24 @@ namespace MaterialManagementSystem
         protected global::System.Web.UI.WebControls.GridView gvMaterials;
 
         /// <summary>
+        /// lblissuedby control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblissuedby;
+
+        /// <summary>
+        /// lblapprovedby control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblapprovedby;
+
+        /// <summary>
         /// btnPrint control.
         /// </summary>
         /// <remarks>

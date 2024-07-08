@@ -17,8 +17,6 @@
     </script>
     <style>
         .imgDiv {
-          /*border: 5px outset red;*/
-          /*background-color: lightblue;*/
           text-align: center;
           margin-left : auto;
           margin-right : auto;
@@ -31,7 +29,6 @@
         }
         .auto-style{
             background-image:url("./logo/loginbackground2.jpg");
-            /*height: 50%;*/
         }
     </style>
 </head>
