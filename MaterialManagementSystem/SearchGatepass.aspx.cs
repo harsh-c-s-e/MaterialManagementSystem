@@ -46,18 +46,6 @@ namespace MaterialManagementSystem
             }
         }
 
-        //protected void gvSearchResults_RowCommand(object sender, GridViewCommandEventArgs e)
-        //{
-        //    if (e.CommandName == "Print")
-        //    {
-        //        int index = Convert.ToInt32(e.CommandArgument);
-        //        GridViewRow selectedRow = gvSearchResults.Rows[index];
-        //        string gatePassId = selectedRow.Cells[0].Text;
-
-        //        Response.Redirect($"PrintGatePass.aspx?GatePass_id={gatePassId}");
-        //    }
-        //}
-
         protected void btnDirectPrint_Click(object sender, EventArgs e)
         {
             string gatePassId = txtSearch.Text.Trim();

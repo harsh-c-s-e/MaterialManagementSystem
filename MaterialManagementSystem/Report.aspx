@@ -73,9 +73,13 @@
 
 
         <div>
-            <h2>Pending Materials</h2>
+<%--            <h2>Complete Report</h2>
+            <h2>Pending Materials</h2>--%>
+            <asp:Button ID="Button1" runat="server" Text="Complete Report" OnClick="Button1_Click" />
+            <asp:Button ID="Button2" runat="server" Text="Pending Materials" OnClick="Button2_Click" />
             <br />
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="GatePass_id,S_No" DataSourceID="SqlDataSource1" CssClass="gridview">
+            <br />
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="GatePass_id,S_No" DataSourceID="SqlDataSource1" CssClass="gridview" Visible="False">
                 <Columns>
                     <asp:BoundField DataField="GatePass_id" HeaderText="GatePass ID" ReadOnly="True" SortExpression="GatePass_id" />
                     <asp:BoundField DataField="S_No" HeaderText="S No" ReadOnly="True" SortExpression="S_No" />
@@ -91,9 +95,43 @@
                     <asp:BoundField DataField="IssueDate" HeaderText="Issue Date" SortExpression="IssueDate" />
                     <asp:BoundField DataField="Issued_by" HeaderText="Issued by" SortExpression="Issued_by" />
                     <asp:BoundField DataField="Approved_by" HeaderText="Approved by" SortExpression="Approved_by" />
+                    <asp:TemplateField HeaderText="History">
+                        <ItemTemplate>
+                            <asp:HyperLink ID="lnkHistory" runat="server" NavigateUrl='<%# "ReturnHistory.aspx?GatePass_id=" + Eval("GatePass_id") %>'>History</asp:HyperLink>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                 </Columns>
             </asp:GridView> 
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db1ConnectionString3 %>" SelectCommand="SELECT [D].[S_No],[D].[Material_description],[D].[Qty_of_material],[D].[Return_type],[D].[Reason_for_issue] ,[G].* FROM [Material_description1] [D] JOIN [Material_gatepass1] [G] ON [D].[Gatepass_id] = [G].[Gatepass_id] WHERE Return_type = 'Returnable' AND isReturn=0 ;"></asp:SqlDataSource>
+            
+
+            <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" CssClass="gridview" Visible="False">
+                <Columns>
+                    <asp:BoundField DataField="GatePass_id" HeaderText="GatePass ID" ReadOnly="True" SortExpression="GatePass_id" />
+                    <asp:BoundField DataField="S_No" HeaderText="S No" ReadOnly="True" SortExpression="S_No" />
+                    <asp:BoundField DataField="Vehical_Reg_No" HeaderText="Vehical Reg No" SortExpression="Vehical_Reg_No" />
+                    <asp:BoundField DataField="Material_description" HeaderText="Material Description" SortExpression="Material_description" />
+                    <asp:BoundField DataField="Qty_of_material" HeaderText="Qty" SortExpression="Qty_of_material" />
+                    <asp:BoundField DataField="Owner" HeaderText="Owner" SortExpression="Owner" />
+                    <asp:BoundField DataField="Issuing_Department" HeaderText="Issuing Department" SortExpression="Issuing_Department" />
+                    <asp:BoundField DataField="From_address" HeaderText="From " SortExpression="From_address" />
+                    <asp:BoundField DataField="To_address" HeaderText="To " SortExpression="To_address" />
+                    <asp:BoundField DataField="Reason_for_issue" HeaderText="Reason for Issue" SortExpression="Reason_for_issue" />
+                    <asp:BoundField DataField="Return_type" HeaderText="Return Type" SortExpression="Return_type" />
+                    <asp:BoundField DataField="IssueDate" HeaderText="Issue Date" SortExpression="IssueDate" />
+                    <asp:BoundField DataField="Issued_by" HeaderText="Issued by" SortExpression="Issued_by" />
+                    <asp:BoundField DataField="Approved_by" HeaderText="Approved by" SortExpression="Approved_by" />
+                    <asp:TemplateField HeaderText="History">
+                        <ItemTemplate>
+                            <asp:HyperLink ID="lnkHistory" runat="server" NavigateUrl='<%# "ReturnHistory.aspx?GatePass_id=" + Eval("GatePass_id") %>'>History</asp:HyperLink>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                
+                </Columns>
+            </asp:GridView> 
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:db1ConnectionString3 %>" SelectCommand="SELECT [D].[S_No],[D].[Material_description],[D].[Qty_of_material],[D].[Return_type],[D].[Reason_for_issue] ,[G].* FROM [Material_description1] [D] JOIN [Material_gatepass1] [G] ON [D].[Gatepass_id] = [G].[Gatepass_id] 
+ORDER BY [G].[Gatepass_id] , [D].[S_No]"></asp:SqlDataSource>
+            <br />
         </div>
     </form>
 </body>

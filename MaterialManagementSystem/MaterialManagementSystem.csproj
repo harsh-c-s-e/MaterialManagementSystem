@@ -76,7 +76,9 @@
     <Content Include="Main2.aspx" />
     <Content Include="PrintGatePass.aspx" />
     <Content Include="Report.aspx" />
+    <Content Include="ReturnHistory.aspx" />
     <Content Include="ReturnMaterial.aspx" />
+    <Content Include="ReturnPage.aspx" />
     <Content Include="SearchGatePass.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -120,12 +122,26 @@
     <Compile Include="Report.aspx.designer.cs">
       <DependentUpon>Report.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ReturnHistory.aspx.cs">
+      <DependentUpon>ReturnHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReturnHistory.aspx.designer.cs">
+      <DependentUpon>ReturnHistory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ReturnMaterial.aspx.cs">
       <DependentUpon>ReturnMaterial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReturnMaterial.aspx.designer.cs">
       <DependentUpon>ReturnMaterial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnPage.aspx.cs">
+      <DependentUpon>ReturnPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReturnPage.aspx.designer.cs">
+      <DependentUpon>ReturnPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="SearchGatePass.aspx.cs">
       <DependentUpon>SearchGatePass.aspx</DependentUpon>
