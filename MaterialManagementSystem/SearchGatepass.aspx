@@ -21,6 +21,26 @@
             width:100%;
             top:0;
         }
+        .gridview {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+
+        .gridview th {
+            background-color: #F49097;
+            color: white;
+            text-align: left;
+            padding: 10px;
+        }
+        .gridview td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .gridview tr:nth-child(even) {
+            background-color: #F2F5FF;
+        }
     </style>
 </head>
 <body>
@@ -38,6 +58,7 @@
             <a class="text-dark nav-item nav-link" href="SearchGatePass.aspx">Print Gatepass</a>
             <a class="text-dark nav-item nav-link" href="Report.aspx">Report</a>
             <a class="text-dark nav-item nav-link disabled" href="ReturnMaterial.aspx">Return material</a>
+              <a class="text-danger nav-item nav-link" href="Login.aspx">LogOut</a>
           </div>
         </div>
       </nav>
@@ -54,7 +75,7 @@
             <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" />
             <asp:Button ID="btnDirectPrint" runat="server" Text="Print Gatepass" OnClick="btnDirectPrint_Click" />
             <br /><br />
-            <asp:GridView ID="gvSearchResults" runat="server" AutoGenerateColumns="False" >
+            <asp:GridView ID="gvSearchResults" runat="server" AutoGenerateColumns="False" CssClass="gridview" >
                 <Columns>
                     <asp:BoundField DataField="GatePass_id" HeaderText="Gate Pass ID" />
                     <asp:BoundField DataField="Vehical_Reg_No" HeaderText="Vehicle Reg. No" />

@@ -41,7 +41,8 @@
         </div>
         <div class="imgDiv">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Image ID="Image1" runat="server" AlternateText="Login page" GenerateEmptyAlternateText="True" Height="80px" ImageUrl="https://tse1.mm.bing.net/th?id=OIP.fio1nXsUCvmMVKmVqHO0cgHaHa&amp;pid=Api&amp;P=0&amp;h=180" Width="133px" />
+            <asp:Image ID="Image2" runat="server" AlternateText="Login page" GenerateEmptyAlternateText="True" Height="80px" ImageUrl="./logo/login.jpg" Width="133px" />
+
             </div>
         <br />
         <div class="maindiv">

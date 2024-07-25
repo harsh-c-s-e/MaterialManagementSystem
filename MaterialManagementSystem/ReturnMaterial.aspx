@@ -42,10 +42,7 @@
         .gridview tr:hover {
             background-color: #F2F5FF;
         }
-        .auto-style1 {
-            margin-right: 0px;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -62,6 +59,7 @@
                     <a class="text-dark nav-item nav-link" href="SearchGatePass.aspx">Print Gatepass</a>
                     <a class="text-dark nav-item nav-link" href="Report.aspx">Report</a>
                     <a class="text-dark bg-warning nav-item nav-link disabled" href="ReturnMaterial.aspx">Return material</a>
+                    <a class="text-danger nav-item nav-link" href="Login.aspx">LogOut</a>
                 </div>
             </div>
         </nav>
@@ -93,12 +91,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     
-                    <%--<asp:BoundField DataField="Qty_of_return" HeaderText="Qty_of_return" SortExpression="Qty_of_return" />--%>
-
-                    
-
-
-
+                
                 </Columns>
             </asp:GridView>
             <br />
@@ -111,70 +104,6 @@
             <br />
 
 
-            <%--<asp:GridView ID="GridView2" runat="server" ShowFooter="True" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" CssClass="auto-style1" ShowHeaderWhenEmpty="True">
-                <Columns>
-                    <asp:TemplateField HeaderText="Gatepass ID">
-                        <FooterTemplate>
-                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                        </FooterTemplate>
-                        <ItemTemplate>
-                            <asp:Label ID="Label4" runat="server" Text='<%# Eval("GatePass_id") %>'></asp:Label>
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:TemplateField>
-                    <asp:TemplateField HeaderText="S No">
-                        <FooterTemplate>
-                            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                        </FooterTemplate>
-                        <ItemTemplate>
-                            <asp:Label ID="Label5" runat="server" Text='<%# Eval("S_No") %>'></asp:Label>
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Return No">
-                        <FooterTemplate>
-                            <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                        </FooterTemplate>
-                        <ItemTemplate>
-                            <asp:Label ID="Label6" runat="server" Text='<%# Eval("Return_No") %>'></asp:Label>
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Qty of Return">
-                        <FooterTemplate>
-                            <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-                        </FooterTemplate>
-                        <ItemTemplate>
-                            <asp:Label ID="Label7" runat="server" Text='<%# Eval("Qty_of_return") %>'></asp:Label>
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Return Date">
-                        <FooterTemplate>
-                            <asp:TextBox ID="TextBox5" runat="server" TextMode="Date"></asp:TextBox>
-                        </FooterTemplate>
-                        <ItemTemplate>
-                            <asp:Label ID="Label8" runat="server" Text='<%# Eval("ReturnDate") %>'></asp:Label>
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Recieved By">
-                        <FooterTemplate>
-                            <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-                        </FooterTemplate>
-                        <ItemTemplate>
-                            <asp:Label ID="Label9" runat="server" Text='<%# Eval("Recieved_by") %>'></asp:Label>
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:TemplateField>
-                    <asp:TemplateField>
-                        <FooterTemplate>
-                            <asp:Button ID="btninsert" runat="server" Text="INSERT" OnClick="btninsert_Click" />
-                        </FooterTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
-                    </asp:TemplateField>
-                </Columns>
-            </asp:GridView>--%>
 
 
             <asp:GridView ID="GridView2" runat="server" CssClass="gridview" AutoGenerateColumns="False" DataKeyNames="GatePass_id,S_No,Return_No" DataSourceID="SqlDataSource3">
@@ -206,15 +135,12 @@
                 </asp:TableRow>
                 <asp:TableRow>
                     <asp:TableCell>
-                        <%--<asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>--%>
                         <asp:Label ID="Label1" runat="server"></asp:Label>
                     </asp:TableCell>
                     <asp:TableCell>
                         <asp:Label ID="Label2" runat="server"></asp:Label>
-                        <%--<asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>--%>
                     </asp:TableCell>
                     <asp:TableCell>
-                        <%--<asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>--%>
                         <asp:Label ID="Label3" runat="server"></asp:Label>
                     </asp:TableCell>
                     <asp:TableCell>
@@ -264,19 +190,6 @@
     </InsertParameters>
 </asp:SqlDataSource>
 
-
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:db1ConnectionString3 %>" 
-            InsertCommand="INSERT INTO [ReturnHistory] ([GatePass_id],  [S_No], [Return_No] , [Qty_of_return], [ReturnDate], [Recieved_by]) VALUES (@GatePass_id, @S_No, @Return_No, @Qty_of_return, @ReturnDate, @Recieved_by)">
-            <InsertParameters>
-                <asp:Parameter Name="GatePass_id" Type="String" />
-                <asp:Parameter Name="S_No" Type="Int32" />
-                <asp:Parameter Name="Return_No" Type="Int32" />
-                <asp:Parameter Name="Qty_of_return" Type="Int32" />
-                <asp:Parameter Name="ReturnDate" Type="DateTime" />
-                <asp:Parameter Name="Recieved_by" Type="String" />
-            </InsertParameters>
-        </asp:SqlDataSource>
 
     </form>
 </body>

@@ -51,7 +51,7 @@
 <body>
     <form id="form1" runat="server">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -63,9 +63,10 @@
             <a class="text-dark nav-item nav-link" href="SearchGatePass.aspx">Print Gatepass</a>
             <a class="text-dark bg-warning nav-item nav-link" href="Report.aspx">Report</a>
             <a class="text-dark nav-item nav-link disabled" href="ReturnMaterial.aspx">Return material</a>
+             <a class="text-danger nav-item nav-link" href="Login.aspx">LogOut</a>
           </div>
         </div>
-      </nav>
+    </nav>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -97,7 +98,7 @@
                     <asp:BoundField DataField="Approved_by" HeaderText="Approved by" SortExpression="Approved_by" />
                     <asp:TemplateField HeaderText="History">
                         <ItemTemplate>
-                            <asp:HyperLink ID="lnkHistory" runat="server" NavigateUrl='<%# "ReturnHistory.aspx?GatePass_id=" + Eval("GatePass_id") %>'>History</asp:HyperLink>
+                            <asp:HyperLink ID="lnkHistory" runat="server" NavigateUrl='<%# "ReturnHistory.aspx?GatePass_id=" + Eval("GatePass_id") + "&S_No=" + Eval("S_No") %>'>History</asp:HyperLink>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
@@ -123,7 +124,7 @@
                     <asp:BoundField DataField="Approved_by" HeaderText="Approved by" SortExpression="Approved_by" />
                     <asp:TemplateField HeaderText="History">
                         <ItemTemplate>
-                            <asp:HyperLink ID="lnkHistory" runat="server" NavigateUrl='<%# "ReturnHistory.aspx?GatePass_id=" + Eval("GatePass_id") %>'>History</asp:HyperLink>
+                            <asp:HyperLink ID="lnkHistory" runat="server" NavigateUrl='<%# "ReturnHistory.aspx?GatePass_id=" + Eval("GatePass_id") + "&S_No=" + Eval("S_No") %>'>History</asp:HyperLink>
                         </ItemTemplate>
                     </asp:TemplateField>
                 

@@ -71,6 +71,7 @@
         <a class="text-dark nav-item nav-link" href="SearchGatePass.aspx">Print Gatepass</a>
         <a class="text-dark nav-item nav-link" href="Report.aspx">Report</a>
         <a class="text-dark nav-item nav-link disabled" href="ReturnMaterial.aspx">Return material</a>
+          <a class="text-danger nav-item nav-link" href="Login.aspx">LogOut</a>
       </div>
     </div>
   </nav>
